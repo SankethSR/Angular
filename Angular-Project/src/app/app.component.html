@@ -1,0 +1,21 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h2>I'm in App Component</h2>
+            <hr>
+            <!-- <app-warningalert></app-warningalert>
+            <app-successalert></app-successalert> -->
+            <label>Username</label>
+            <input 
+                type="text" 
+                class="form-control"
+                [(ngModel)]="userName">
+            <p>{{ userName }}</p>
+            <button 
+                class="btn btn-warning" 
+                [disabled]="userName === ''"
+                (click)="onResetUsername()">Reset</button>
+        </div>
+    </div>
+</div>
+

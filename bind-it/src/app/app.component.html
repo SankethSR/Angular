@@ -1,0 +1,24 @@
+<div class="container">
+  <app-game-controller (startButtonPressed)="onStartButtonPressed($event)"></app-game-controller>
+  <hr>
+  <div class="row">
+    <div class="col-sm-12">
+      <app-odd *ngFor="let element of oddNumberArray" [number]="element"></app-odd>
+      <app-even *ngFor="let element of evenNumberArray" [number]="element"></app-even>
+    </div>
+  </div>
+  <hr>
+  <p appBasicHighlight>I am styled with basic directive!</p>
+  <p appBetterHighlight>I am styled with a better directive!</p>
+  <hr>
+  <button class="btn btn-secondary" (click)="onButtonPressed()">Check!!</button>
+  <p *appUnless="buttonPressed">Let's crate a custom structural directive!</p>
+  <hr>
+  <h1>DropDown Directive</h1>
+  <div class="dropdown">
+    <button appDropDown class="btn btn-secondary dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+      Dropdown button
+    </button>
+    <app-dropdown></app-dropdown>
+  </div>
+</div>
